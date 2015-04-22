@@ -9,7 +9,7 @@ switch ($_GET['action']) {
 		case 'add_product':
 		global $messageStack;
 		//print_r($_POST['id']);
-		if ( ($_POST['wishlist'] == 'yes') || ($_POST['wishlist_x']) ) {
+		if ( ($_POST['wishlist'] == 'Add to WishList') || ($_POST['wishlist_x']) ) {
 			if ( $_SESSION['cart']->get_quantity($_GET['products_id']) == 1 ){
 			$_SESSION['cart']->remove($_GET['products_id']);
 			} else {
